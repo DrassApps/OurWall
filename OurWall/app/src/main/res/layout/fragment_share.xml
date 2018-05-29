@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/White"
+    android:id="@+id/shareFragment">
+
+    <TextView
+        android:id="@+id/share_infoText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:textStyle="bold"
+        android:textSize="18dp"
+        android:textColor="@color/backgroundLogin_button_top"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/share_dataText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textStyle="bold"
+        android:layout_below="@+id/share_infoText"
+        android:textSize="15dp"
+        android:layout_marginStart="10dp"
+        android:textColor="@color/Gray"
+        android:visibility="invisible"/>
+
+    <RelativeLayout
+        android:id="@+id/share_photoLay"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_above="@+id/share_musicLay"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:background="@color/backgroundLogin_button_top">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="Añadir un foto"
+            android:textColor="@color/WhiteSmoke"
+            android:textSize="20dp"
+            android:textStyle="bold"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/share_musicLay"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/backgroundLogin_button_top">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="Añadir una canción"
+            android:textColor="@color/WhiteSmoke"
+            android:textSize="20dp"
+            android:textStyle="bold"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/share_textLay"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_below="@+id/share_musicLay"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/backgroundLogin_button_top">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="Añadir un texto"
+            android:textColor="@color/WhiteSmoke"
+            android:textSize="20dp"
+            android:textStyle="bold"/>
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/share_imagePicked"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        />
+
+
+    <RelativeLayout
+        android:id="@+id/share_shareLay"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone"
+        android:background="@color/backgroundLogin_button_top">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="Compartir en Our Wall"
+            android:textColor="@color/WhiteSmoke"
+            android:textSize="20dp"
+            android:textStyle="bold"/>
+
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/share_textToShare"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:visibility="gone"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:ems="10"
+        android:textColor="@color/black"
+        android:hint="Escribe tu texto"
+        android:textColorHint="@color/Gray"
+        android:inputType="text"
+        android:maxLines="1" />
+
+</RelativeLayout>

@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">OurWall</string>
+
+    <!-- Permissions -->
+    <string name="denegatePermissions">Denegados los permisos en la aplicación, permita usar su localización</string>
+    <string name="grantedPermissions">La aplicación tiene los permisos requeridos</string>
+    <string name="locationPermission">Permiso de localización necesario</string>
+    <string name="configurar">Configuración</string>
+
+    <!-- LOGIN VIEW -->
+    <string name="appName">Our Wall</string>
+    <string name="correoHint">Correo electrónico</string>
+    <string name="passwdHint">Contraseña</string>
+    <string name="loginText">ENTRAR</string>
+    <string name="registerText">CREAR CUENTA</string>
+    <string name="imageDescr">ShowPass</string>
+
+    <!-- MAPS VIEW -->
+    <string name="pos">Tu posición</string>
+
+    <!-- MENU -->
+    <string name="footerMenu_profile">Perfil</string>
+    <string name="footerMenu_share">Comparte</string>
+    <string name="footerMenu_map">Mapa</string>
+
+</resources>

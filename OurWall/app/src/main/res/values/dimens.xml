@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- LOGIN VIEW  -->
+    <dimen name="loginView_textSize">50sp</dimen>
+    <dimen name="button_textSize">16sp</dimen>
+</resources>
