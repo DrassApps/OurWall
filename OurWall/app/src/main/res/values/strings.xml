@@ -7,6 +7,16 @@
     <string name="locationPermission">Permiso de localización necesario</string>
     <string name="configurar">Configuración</string>
 
+    <!-- UI MESSAGES -->
+    <string name="dialog_title">Ayuda</string>
+    <string name="dialog_button">Vale</string>
+    <string name="dialog_message1">· Utiliza un correo electrónico válido \n\n · La contraseña tiene que ser de más de 5 carácteres</string>
+    <string name="err_login">Datos de acceso incorrectos</string>
+    <string name="err_user">Este usuario ya existe</string>
+    <string name="err_email">Email incorrecto</string>
+    <string name="err_getData">Error al recoger los datos</string>
+    <string name="err_lenght">Introduce un texto más largo</string>
+
     <!-- LOGIN VIEW -->
     <string name="appName">Our Wall</string>
     <string name="correoHint">Correo electrónico</string>
@@ -17,6 +27,14 @@
 
     <!-- MAPS VIEW -->
     <string name="pos">Tu posición</string>
+
+    <!-- SHARE VIEW -->
+    <string name="shareView_choose">Elige una</string>
+    <string name="shareView_image">Vas a añadir una imagen</string>
+    <string name="shareView_sound">Vas a añadir un sonido</string>
+    <string name="shareView_text">Vas a añadir un texto</string>
+    <string name="shareView_err_upload">Ha habido un problema, vuelve a intentarlo</string>
+    <string name="shareView_suc_upload">Archivo subido correctamente</string>
 
     <!-- MENU -->
     <string name="footerMenu_profile">Perfil</string>
