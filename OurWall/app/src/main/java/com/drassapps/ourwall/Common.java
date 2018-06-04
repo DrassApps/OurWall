@@ -30,7 +30,7 @@ public class Common {
         act.startActivity(intent);
     }
 
-    // Fuerza la creación de un SnackBar, personificado
+    // Display custom snackBar
     public void setSnackBar(View coordinatorLayout, String snackTitle) {
         Snackbar snackbar = Snackbar.make(coordinatorLayout, snackTitle, Snackbar.LENGTH_SHORT);
         snackbar.show();
@@ -38,4 +38,6 @@ public class Common {
         TextView txtv = view.findViewById(android.support.design.R.id.snackbar_text);
         txtv.setGravity(Gravity.CENTER_HORIZONTAL);
     }
+
+
 }
