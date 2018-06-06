@@ -3,37 +3,172 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/WhiteSmoke"
+    android:background="@color/White"
     android:id="@+id/profileFragment">
 
     <RelativeLayout
+        android:id="@+id/profile_id"
         android:layout_width="match_parent"
-        android:layout_height="150dp"
+        android:layout_height="50dp"
         android:background="@drawable/back_profile1">
 
         <TextView
+            android:id="@+id/profile_userEmail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textStyle="bold"
             android:textSize="15dp"
             android:textColor="@color/WhiteSmoke"
-            android:text="amicomillan@gmail.com"
-            android:layout_marginBottom="20dp"
+            android:text=""
             android:layout_centerHorizontal="true"
-            android:layout_alignParentBottom="true"/>
+            android:layout_centerVertical="true"/>
 
     </RelativeLayout>
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/profile_id"
+        android:layout_above="@+id/profile_logOutLay">
 
-    <TextView
-        android:id="@+id/profile_signOut"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-        android:text="Cerrar Sesión"
-        android:textColor="@color/black"
-        android:textSize="20dp"/>
+        <TextView
+            android:id="@+id/profile_messageShare"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            android:text=""/>
 
+
+        <TextView
+            android:id="@+id/profile_imageShare"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/black"
+            android:layout_below="@+id/profile_messageShare"
+            android:textSize="18dp"
+            android:text=""/>
+
+        <TextView
+            android:id="@+id/profile_soundShare"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/black"
+            android:layout_below="@+id/profile_imageShare"
+            android:textSize="18dp"
+            android:text=""/>
+
+        <View
+            android:id="@+id/profile_separator"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/Gray"
+            android:layout_below="@+id/profile_soundShare"/>
+
+        <TextView
+            android:id="@+id/profile_info1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/profile_separator"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:text="Tus preferencias"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/profile_info1"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            android:text="Activar notificaciones"/>
+
+        <Switch
+            android:id="@+id/profile_activeNoti"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/profile_info1"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="20dp"
+            android:thumbTint="@color/grey_300"
+            android:checked="true"/>
+
+        <TextView
+            android:id="@+id/profile_info2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/profile_activeNoti"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/black"
+            android:text="Zona de notificaciones"
+            android:textSize="18dp"/>
+
+        <Switch
+            android:id="@+id/profile_activeZone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/profile_activeNoti"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="20dp"
+            android:thumbTint="@color/grey_300"
+            android:checked="false"/>
+
+        <View
+            android:id="@+id/profile_separator2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/Gray"
+            android:layout_below="@+id/profile_activeZone"/>
+
+
+        <Spinner
+            android:id="@+id/profile_areaList"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_below="@+id/profile_info2"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="10dp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/profile_logOutLay"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/Gray"/>
+
+        <TextView
+            android:id="@+id/profile_signOut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:text="Cerrar Sesión"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="20dp"/>
+
+
+    </RelativeLayout>
 
 </RelativeLayout>

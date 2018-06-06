@@ -91,7 +91,7 @@ public class MainActivity extends AppCompatActivity {
                 String email = emailText.getText().toString();
                 String password = passwordText.getText().toString();
 
-                if(correoValido(email) && password.length() > 5){
+                if(validEmail(email) && password.length() > 5){
                     mAuth.signInWithEmailAndPassword(email, password)
                             .addOnCompleteListener(MainActivity.this,
                                     new OnCompleteListener<AuthResult>() {
@@ -100,18 +100,13 @@ public class MainActivity extends AppCompatActivity {
                                             FirebaseUser user =
                                                     FirebaseAuth.getInstance().getCurrentUser();
 
-                                            if (user != null) {
-                                                Log.i("MAIN",user.getEmail());
-                                                updateUI(user); }
-
+                                            if (user != null) { updateUI(user); }
                                             if (!task.isSuccessful()) {
-                                                ui.setSnackBar(main,
-                                                        "Datos de acceso incorrectos");
+                                                ui.setSnackBar(main, getString(R.string.err_login));
                                             }
                                         }
                                     });
-
-                }else{ ui.setSnackBar(main,"Datos de acceso incorrectos"); }
+                }else{ ui.setSnackBar(main, getString(R.string.err_login)); }
             }
         });
 
@@ -121,7 +116,7 @@ public class MainActivity extends AppCompatActivity {
                 String email = emailText.getText().toString();
                 String password = passwordText.getText().toString();
 
-                if (correoValido(email) && password.length() > 5){
+                if (validEmail(email) && password.length() > 5){
                     mAuth.createUserWithEmailAndPassword(email, password)
                             .addOnCompleteListener(MainActivity.this,
                                     new OnCompleteListener<AuthResult>() {
@@ -133,13 +128,12 @@ public class MainActivity extends AppCompatActivity {
 
                                             if (user != null) { updateUI(user); }
                                             if (!task.isSuccessful()) {
-                                                ui.setSnackBar(main,
-                                                        "Este usuario ya exite");
+                                                ui.setSnackBar(main, getString(R.string.err_user));
                                             }
                                         }
                             });
                 } else {
-                    setSnackBarWithButton(main,"Datos de registo incorrectos");
+                    setSnackBarWithButton(main,getString(R.string.err_login));
                 }
             }
         });
@@ -151,33 +145,33 @@ public class MainActivity extends AppCompatActivity {
 
     // MARK - METHODS
 
-    // Actualizamos la UI
+    // Update UI
     private void updateUI(FirebaseUser user) {
         Intent i = new Intent(MainActivity.this, UserActivity.class);
         i.putExtra("email",user.getEmail());
         startActivity(i);
     }
-    // Permite gestionar si los inputs del usuario son correctos
-    private boolean correoValido(String correo) {
+    // Allow to manage user email
+    private boolean validEmail(String correo) {
         if (!Patterns.EMAIL_ADDRESS.matcher(correo).matches()) {
-            emailText.setError("Email incorrecto");
+            emailText.setError(getString(R.string.err_email));
             return false;
         } else { emailText.setError(null); }
 
         return true;
     }
-    // Fuerza la creación de un SnackBar con un botón
+    // Display custom snackBar
     private void setSnackBarWithButton(View coordinatorLayout, String snackTitle) {
         Snackbar snackbar = Snackbar.make(coordinatorLayout, snackTitle, Snackbar.LENGTH_SHORT);
-        snackbar.setAction("Ayuda", new View.OnClickListener() {
+        snackbar.setAction(getString(R.string.dialog_title), new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 AlertDialog.Builder builder = new AlertDialog.Builder(
                         new ContextThemeWrapper(MainActivity.this,R.style.AlertDialogCustom));
-                builder.setMessage("· Utiliza un correo electrónico válido \n\n" +
-                        "· La contraseña tiene que ser de más de 5 carácteres")
-                        .setTitle("Ayuda")
-                        .setPositiveButton("Vale", new DialogInterface.OnClickListener() {
+                builder.setMessage(getString(R.string.dialog_message1))
+                        .setTitle(getString(R.string.dialog_title))
+                        .setPositiveButton(getString(R.string.dialog_button),
+                                new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int id) { }
                         });
                 builder.setCancelable(false);
