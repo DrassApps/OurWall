@@ -25,6 +25,13 @@
     <string name="registerText">CREAR CUENTA</string>
     <string name="imageDescr">ShowPass</string>
 
+    <!-- PROFILE VIEW -->
+    <string name="profile_dialogNotiTitle">Cuidado</string>
+    <string name="profile_dialogNotiMes1">Has desactivado las notificaciones</string>
+    <string name="profile_dialogNotiMes2">Acabas de activar las notificaciones</string>
+    <string name="profile_dialogAreaMes1">Has desactivado las notificaciones en </string>
+    <string name="profile_dialogAreaMes2">Acabas de activar las notificaciones en </string>
+
     <!-- MAPS VIEW -->
     <string name="pos">Tu posición</string>
 
@@ -40,5 +47,17 @@
     <string name="footerMenu_profile">Perfil</string>
     <string name="footerMenu_share">Comparte</string>
     <string name="footerMenu_map">Mapa</string>
+
+    <string-array name="community">
+        <item>Todas las ciudades</item>
+        <item>Valencia</item>
+        <item>Madrid</item>
+        <item>Cocina</item>
+        <item>Estudio</item>
+        <item>Dormitorio pequeño</item>
+        <item>Dormitorio grande</item>
+        <item>Baño pequeño</item>
+        <item>Baño grande</item>
+    </string-array>
 
 </resources>

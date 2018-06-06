@@ -2,6 +2,7 @@ package com.drassapps.ourwall;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Color;
 import android.net.Uri;
 import android.support.design.widget.Snackbar;
 import android.view.Gravity;
@@ -38,6 +39,4 @@ public class Common {
         TextView txtv = view.findViewById(android.support.design.R.id.snackbar_text);
         txtv.setGravity(Gravity.CENTER_HORIZONTAL);
     }
-
-
 }
