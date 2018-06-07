@@ -36,6 +36,7 @@ public class FragmentProfile extends Fragment implements AdapterView.OnItemSelec
     // MARK - UI
 
     private Spinner areaList;
+    private String currentCity;
 
     // MARK - MAIN
 
@@ -97,12 +98,12 @@ public class FragmentProfile extends Fragment implements AdapterView.OnItemSelec
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                 if (b) {
                     createDialog(getString(R.string.profile_dialogNotiTitle),
-                            getString(R.string.profile_dialogAreaMes2),
+                            getString(R.string.profile_dialogAreaMes2) + currentCity,
                             getString(R.string.dialog_button));
 
                 }else {
                     createDialog(getString(R.string.profile_dialogNotiTitle),
-                            getString(R.string.profile_dialogAreaMes1),
+                            getString(R.string.profile_dialogAreaMes1) ,
                             getString(R.string.dialog_button));
                 }
             }
@@ -130,7 +131,7 @@ public class FragmentProfile extends Fragment implements AdapterView.OnItemSelec
     }
 
     private void createDialog(String title, String message, String dialogButton) {
-        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity(),R.style.AlertDialogStyle);
         builder.setMessage(message)
                 .setTitle(title)
                 .setPositiveButton(dialogButton, new DialogInterface.OnClickListener() {
@@ -148,9 +149,29 @@ public class FragmentProfile extends Fragment implements AdapterView.OnItemSelec
     public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
         if (parent.getId() == R.id.profile_areaList) {
             switch (parent.getItemAtPosition(pos).toString()){
-                case "General":
+                case "Todas las ciudades":
+                    currentCity = "Todas las ciudades";
                     break;
-                case "Salón":
+                case "Valencia":
+                    currentCity = "Valencia";
+                    break;
+                case "Madrid":
+                    currentCity = "Madrid";
+                    break;
+                case "Sevilla":
+                    currentCity = "Sevilla";
+                    break;
+                case "Barcelona":
+                    currentCity = "Barcelona";
+                    break;
+                case "Vigo":
+                    currentCity = "Vigo";
+                    break;
+                case "Málaga":
+                    currentCity = "Málaga";
+                    break;
+                case "Salamanca":
+                    currentCity = "Salamanca";
                     break;
             }
         }

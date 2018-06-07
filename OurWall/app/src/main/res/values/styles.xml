@@ -8,6 +8,12 @@
         <item name="colorAccent">@color/White</item>
     </style>
 
+    <style name="AlertDialogStyle" parent="Theme.AppCompat.Light.Dialog">
+        <item name="android:textColor">@color/backgroundLogin_button_top</item>
+        <item name="android:textColorPrimary">@color/SlateGray</item>
+        <item name="android:colorAccent">@color/backgroundLogin_button_top</item>
+    </style>
+
     <style name="Error" parent="TextAppearance.AppCompat.Caption">
         <item name="android:textColor">@color/Red</item>
     </style>

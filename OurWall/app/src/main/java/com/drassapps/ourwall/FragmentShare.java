@@ -133,6 +133,7 @@ public class FragmentShare extends Fragment {
                         if (userText.length() > 5) {
                             uploadText(userText);
                             updateCount("text");
+                            ui.setSnackBar(mLayout,"Mensaje compartido");
                         }
                         else { ui.setSnackBar(mLayout,getString(R.string.err_lenght)); }
                         break;
@@ -214,7 +215,6 @@ public class FragmentShare extends Fragment {
 
             case "sound":
                 editor.putString("nSoundSend", String.valueOf(Integer.valueOf(nSoundSend)+1));
-
                 break;
 
             case "text":

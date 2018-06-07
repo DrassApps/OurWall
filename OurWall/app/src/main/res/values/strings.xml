@@ -52,12 +52,11 @@
         <item>Todas las ciudades</item>
         <item>Valencia</item>
         <item>Madrid</item>
-        <item>Cocina</item>
-        <item>Estudio</item>
-        <item>Dormitorio pequeño</item>
-        <item>Dormitorio grande</item>
-        <item>Baño pequeño</item>
-        <item>Baño grande</item>
+        <item>Sevilla</item>
+        <item>Barcelona</item>
+        <item>Vigo</item>
+        <item>Málaga</item>
+        <item>Salamanca</item>
     </string-array>
 
 </resources>

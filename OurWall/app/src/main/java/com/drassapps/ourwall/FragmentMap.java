@@ -221,10 +221,8 @@ public class FragmentMap extends Fragment implements GoogleApiClient.ConnectionC
 
     // Get locations of shares
     public void getDataFromDB() {
-        if (Integer.valueOf(currentRef) > 0 ) {
             for (int i = 0; i < Integer.valueOf(currentRef);i ++) {
                 getLocationsOnDB(String.valueOf(i));
-            }
         }
     }
 
@@ -243,8 +241,9 @@ public class FragmentMap extends Fragment implements GoogleApiClient.ConnectionC
     private void showShareInfo() {
         bottomSheetBehavior.setState(BottomSheetBehavior.STATE_EXPANDED);
 
+        Log.i("MAIN", "EH" + currentRef);
         // Load image using GLIDE
-        StorageReference ref = FirebaseStorage.getInstance().getReference().child(currentRef);
+        StorageReference ref = FirebaseStorage.getInstance().getReference().child(String.valueOf(Integer.valueOf(currentRef)-1));
         Glide.with(getActivity()).using(new FirebaseImageLoader()).load(ref).into(bottomSheetImage);
 
         bottomSheetEmail.setText(usuData.email);
